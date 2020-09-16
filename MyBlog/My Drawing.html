@@ -2,40 +2,51 @@
 <html>
 <head>
 <style>
-
-body {
- color: #ff9594;
+    body {margin:25px;
+         color: hotpink;
+      background-image: url('pink(2).jpg');
+      background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
     }
-</style>
-</head>
-<body>
-    
-    
-<h1 style="text-align:center;">My Drawings</h1>
+    div.polaroid{
+        width:30%;
+        background-color:white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+    div.container{
+        text-align:center;
+        padding:10px 20px;
+        
+    }
+        div.relative {
+  position: relative;
+  left: 150px;
 
-<div style="width:100%">
-<div style=" float:left;width:30%; margin-right:3%">
-  
-<h2>团子大家族</h2>
-<p>画一下水彩~</p>      
-<p><img src="img_3644.png" width="518" height="445"></p>
-</div>
-  
-    
-<div style=" float:left;width:30%; margin-right:3%">      
-    <h2>女恶魔</h2>
-    <p>作业</p>     
-<p>
-<img src="女恶魔.png" width="706" height="815">
-</p></div>
-    
- <div style=" float:left;width:30%;">   
-    <h2>粉头发的妹妹</h2>
-    <p>厚涂</p>       
-<p><img src="粉头发的妹妹.png" width="512" height="512"></p>
-</div>
-</div>  
-    
+}
 
-</body>
-</html>
+    </style>
+    </head>
+    <body>
+    <div class="relative">
+    <div class="polaroid">
+           <div class="container">
+        <img src="粉头发的妹妹.png" width="512" height="512" alt="pink hair" style="width:100%">
+        <p>厚涂</p>
+        </div>
+        </div>
+        </div>
+    
+        <br>
+          <div class="relative">
+            <div class="polaroid">
+                <div class="container">
+        <img src="img_3644.png" width="512" height="512" alt="团子大家族" style="width:100%">
+        
+        <p>团子大家族</p>
+        </div>
+        </div>
+        </div>
+
+    
+    </body>
