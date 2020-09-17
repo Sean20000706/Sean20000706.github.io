@@ -17,6 +17,29 @@ body {
   margin-right: auto;
 
     }
+    
+       .pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: hotpink;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
 </style>
 </head>
 <body>
@@ -48,6 +71,17 @@ body {
 </table>
 
         <p><img src="表情包.GIF" width="200" height="200"></p>
+    
+    <div class="pagination">
+  <a href="#">&laquo;</a>
+    <a href="#">1</a>
+      <a href="normal.html">2</a>
+    <a href="My Drawing.html">3</a>
+    <a href="Table.html"class="active" >4</a>  
+  <a href="spcial.html">5</a>
+  <a href="click pic.html">6</a>
+  <a href="#">&raquo;</a>
+</div>
     
  </body>
 </html>
