@@ -12,6 +12,29 @@ text-align:center;
   background-attachment: fixed;  
   background-size: cover;
 }
+        
+            .pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: Black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: hotpink;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
     </style>
 </head>
 <body>
@@ -27,7 +50,18 @@ text-align:center;
     <area shape="rect" coords="158,195,273,345"href="(5).html">
     <area shape="rect" coords="291,195,406,345"href="(6).html">
 </map>
-    
+    <br>
+    <br>
+    <div class="pagination">
+  <a href="spcial.html">&laquo;</a>
+    <a href="index.html">1</a>
+      <a href="normal.html">2</a>
+    <a href="My Drawing.html">3</a>
+    <a href="Table.html">4</a>  
+  <a href="spcial.html">5</a>
+  <a href="click pic.html"class="active">6</a>
+  <a href="#">&raquo;</a>
+</div>
     
     </body>
 </html>
