@@ -3,65 +3,59 @@
 <head>
 <style>
     body {
-    color: #ffffff;
-  background-image: url('pink(2).jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
+     
+         padding: 100px 0;
+text-align:center;
+  
 }
-.center {
-  padding: 120px 0;
-  text-align: center;
-}
-    .pagination {
+    
+.dropdown {
+  position: relative;
   display: inline-block;
 }
 
-.pagination a {
-  color: white;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.pagination a.active {
-  background-color: pink;
-  color: white;
-  border-radius: 5px;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-.pagination a:hover:not(.active) {
-  background-color: #ddd;
-  border-radius: 5px;
+.desc {
+  padding: 15px;
+  text-align: center;
 }
-
-    
 </style>
 </head>
 <body>
 
-        
-
-<div class="center">
-  <h1 style="font-size:300%;">MY BLOG</h1>
-     <h3>welcome ^^</h3>
-   
-<div class="pagination">
-  <a href="#">&laquo;</a>
-    <a href="#"class="active">home</a>
-      <a href="normal.html">homework1</a>
-    <a href="My Drawing.html">homework2</a>
-    <a href="Table.html">homework3</a>  
-  <a href="spcial.html">homework4</a>
-  <a href="click pic.html">homework5</a>
-  <a href="normal.html">&raquo;</a>
+    <div class="dropdown">
+ <img src="style1.png" alt="Cinque Terre" width="120" height="66">
+     <div class="dropdown-content">
+  <img src="style1.png" alt="Cinque Terre" width="600" height="331">
+  <div class="desc">style 1</div>
+  </div>
 </div>
 
-
+<div class="dropdown">
+  <img src="style2.png" alt="Cinque Terre" width="120" height="66">
+  <div class="dropdown-content">
+  <img src="style2.png" alt="Cinque Terre" width="600" height="331">
+  <div class="desc">style 2</div>
+  </div>
 </div>
-
-
+    <br>
     
+        <a href="My Drawing.html">style 1</a>
+    <a href="Table.html">style 2</a>  
+    
+
 
 </body>
 </html>
