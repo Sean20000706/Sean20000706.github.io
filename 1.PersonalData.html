@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    .clearfix {
+  overflow: auto;
+}
+
+.img2 {
+  float: right;
+   padding-right: 50px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* 最上面的标题 */
+.header {
+  padding: 30px;
+  text-align: center;
+  background:  #7d83ff; 
+}
+
+.header h1  {
+  font-size: 50px;
+    color:white;
+}
+.header p  {
+    color:white;
+}
+/* 设置顶部导航栏的样式 */
+    
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #d1cdff;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0; 
+}
+.topnav {
+  
+  background-color: white;
+}
+
+/*设置topnav链接的样式 */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.topnav a:hover:not(.active) {
+  background-color: #BEABFF;
+  color: white;
+}
+
+.active {
+   background-color: #BEABFF;
+  color: white;
+}
+    
+
+/* 创建两个彼此相邻浮动的不等列。 */
+/* 左列 */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/*右 目前不知道有什么用，可加可不加*/
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+
+
+.fakeimg {
+    background-image: url('flower.jpg');
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    color:#7d83ff;
+  background-color: white;
+  padding: 20px;/* 内容距离边缘的间距 */
+  margin-top: 20px;/* 白色放开纵向的间距 */
+}
+
+/* 在列后漂浮 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Personal Data</h1>
+  <p>^ ^</p>
+</div>
+    
+ <ul>
+<div class="topnav">
+  <a href="home2.html">Home</a>
+      <a href="1.PersonalData.html"class="active">PersonalData</a>
+    <a href="2.Album.html">Album</a>
+    <a href="3.MyFavoriteSong.html">MyFavoriteSong</a>  
+  <a onclick="myFunction()" style="float:right">Coming soon</a>
+        <script>
+function myFunction() {
+  alert("Coming soon!!");
+}
+</script>
+</div>
+    </ul>
+            
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>ED SHEERAN</h2>
+      <h5>Oct 10.1 Saturday</h5>
+                <div class="clearfix">
+<img class="img2"  src="Ed sheeran2.jpg" alt="Ed sheeran" width="533" height="300">
+                            <p>Nationality: UK</p>
+        <p>Birthplace: West Yorkshire, England</p>
+        <p>Date of birth: February 17, 1991</p>
+       <p> Constellation: Aquarius</p>
+<p>Height: 173 cm</p>
+<p>Weight: 65 kg</p>
+       <p>Agency: Atlantic Records</p>
+  </div>
+
+
+    </div>
+      
+      
+      <div class="card">
+      <h2>Achievement</h2>
+      <h5>Oct 10.1 Saturday</h5>
+                <div class="clearfix">
+<img class="img2"  src="Ed sheeran4.jpg" alt="Ed sheeran" width="533" height="300">
+                    <p>Major achievements:</p>
+<p>Best male singer at the 32nd all Britain Music Awards</p>
+<p>The 32nd all Britain Music Awards</p>
+<p>Song nominations for the 55th Grammy Awards</p>
+<p>Best newcomer nomination for the 56th Grammy Awards</p>
+  </div>
+
+
+    </div>

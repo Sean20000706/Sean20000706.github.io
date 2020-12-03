@@ -2,6 +2,193 @@
 <html>
 <head>
 <style>
+    .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #7d83ff;
+  overflow: hidden;
+  width: 50%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+    
+    
+    
+    
+    
+    
+    
+    
+        #myImg4 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg4:hover {opacity: 0.7;}
+        #myImg3 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg3:hover {opacity: 0.7;}
+    #myImg2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg2:hover {opacity: 0.7;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 30%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+
+}
+
+
+        .clearfix {
+  overflow: auto;
+}
+    
+    .img2 {
+  float: right;
+   padding-right: 50px;
+}
+    
+    .button {
+  background-color: #7d83ff; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color:#7d83ff; 
+  color: white; 
+  border: 2px solid #7d83ff;
+}
+
+.button1:hover {
+  background-color: white;
+  color: #7d83ff;
+}
+    
 * {
   box-sizing: border-box;
 }
@@ -27,9 +214,21 @@ body {
 
     color:white;
 }
+
 /* 设置顶部导航栏的样式 */
-.topnav {
+    
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
+  background-color: #d1cdff;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0; 
+}
+.topnav {
+  
   background-color: white;
 }
 
@@ -37,7 +236,7 @@ body {
 .topnav a {
   float: left;
   display: block;
-  color: #7d83ff;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -45,16 +244,15 @@ body {
 
 
 .topnav a:hover:not(.active) {
-  background-color: #ffe6e6;
-  color: #ff0055;
+  background-color: #BEABFF;
+  color: white;
 }
 
 .active {
-  background-color: #ffe6e6;
-  color: #ff0055;
+   background-color: #BEABFF;
+  color: white;
 }
     
-
 /* 创建两个彼此相邻浮动的不等列。 */
 /* 左列 */
 .leftcolumn {   
@@ -80,7 +278,7 @@ body {
 
 /* Add a card effect for articles */
 .card {
-    color:#ff8080;
+    color:#7d83ff;
   background-color: white;
   padding: 20px;/* 内容距离边缘的间距 */
   margin-top: 20px;/* 白色放开纵向的间距 */
@@ -97,7 +295,7 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ffb5ba;
+  background: #ddd;
   margin-top: 20px;
 }
 
@@ -122,28 +320,313 @@ body {
 
 <div class="header">
   <h1>Hello ^^</h1>
-  <p>welcome to my website.</p>
+  <p>Let's learn about ED Sheeran ! !</p>
 </div>
-
+    
+<ul>
 <div class="topnav">
-  <a href="home2.html"class="active">Home</a>
-      <a href="homework1.html">Homework1</a>
-    <a href="homework2.html">Homework2</a>
-    <a href="homework3.html">Homework3</a>  
-  <a href="homework4.html">Homework4</a>
-  <a href="homework5.html">Homework5</a>
-  <a href="#" style="float:right">Coming soon</a>
+  <a onclick="scrollToView1()" >Home</a>
+<script>
+    function scrollToView1 () {
+        document.getElementById('Home').scrollIntoView({
+            block: 'start',
+            inline: 'nearest',
+            behavior: 'smooth'
+        })
+    }
+</script>
+    
+      <a onclick="scrollToView2()" >PersonalData</a>  
+    <script>
+        function scrollToView2 () {
+        document.getElementById('PersonalData').scrollIntoView({
+            block: 'start',
+            inline: 'nearest',
+            behavior: 'smooth'
+        })
+    }
+</script>
+    
+    <a onclick="scrollToView3()" >Album</a>
+        <script>
+        function scrollToView3 () {
+        document.getElementById('Album').scrollIntoView({
+            block: 'start',
+            inline: 'nearest',
+            behavior: 'smooth'
+        })
+    }
+</script>
+    
+
+        <a onclick="scrollToView4()" >MyFavoriteSong</a> 
+            <script>
+        function scrollToView4 () {
+        document.getElementById('MyFavoriteSong').scrollIntoView({
+            block: 'start',
+            inline: 'nearest',
+            behavior: 'smooth'
+        })    
+    }
+</script>
+    
+  <a onclick="myFunction()" style="float:right">Coming soon</a>
+    <script>
+function myFunction() {
+  alert("Coming soon!!");
+    
+}
+</script>
 </div>
+    </ul>
 
 <div class="row">
   <div class="leftcolumn">
-    <div class="card">
+    <div id="Home"></div>
+   
+      <div class="card">
       <h2>Nice to meet you!</h2>
-      <h5>Oct 10.1 Saturday</h5>
-      <div class="fakeimg" style="height:500px;">pic</div>
-      <p>This is my first website.</p>
-      <p> 0v0</p>
+     <p id="demo1"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo1").innerHTML = d;
+</script>
+
+    
+<audio controls>
+  <source src="Ed Sheeran - Photograph.flac" type="audio/ogg">
+</audio>
+        <p>What is your name?</p>
+    
+        <button class="button button1" onclick="MyName()">My name is ...</button>
+
+<p id="demo"></p>
+
+<script>
+function MyName() {
+  var txt;
+  var person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
+    txt = "Hello " + person + " ! <p>How are you today?I guess you also like music very much. <p><p>My favorite singer is ed Sheeran.If you are also interested in him, come and get to know him with me.<p>";
+            
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+<p id="demo"></p>
+<img src="Ed sheeran.jpg" alt="Ed sheeran" width="300" height="410">
+        
     </div>
+      
+      
+     <div id="PersonalData"></div>
+          <div class="card">
+      <h2>ED SHEERAN</h2>
+      <h5>Oct 10.1 Saturday</h5>
+                <div class="clearfix">
+<img class="img2"  src="Ed sheeran2.jpg" alt="Ed sheeran" width="533" height="300">
+                            <p>Nationality: UK</p>
+        <p>Birthplace: West Yorkshire, England</p>
+        <p>Date of birth: February 17, 1991</p>
+       <p> Constellation: Aquarius</p>
+<p>Height: 173 cm</p>
+<p>Weight: 65 kg</p>
+       <p>Agency: Atlantic Records</p>
+  </div>
+
+
+    </div>
+      
+      
+      <div class="card">
+      <h2>Achievement</h2>
+      <h5>Oct 10.1 Saturday</h5>
+                <div class="clearfix">
+<img class="img2"  src="Ed sheeran4.jpg" alt="Ed sheeran" width="533" height="300">
+                    <p>Major achievements:</p>
+<p>Best male singer at the 32nd all Britain Music Awards</p>
+<p>The 32nd all Britain Music Awards</p>
+<p>Song nominations for the 55th Grammy Awards</p>
+<p>Best newcomer nomination for the 56th Grammy Awards</p>
+  </div>
+      </div>
+          
+      
+    <div id="Album" ></div>
+          <div class="card">     
+      <h2>Album</h2>
+      <h5>Oct 10.1 Saturday</h5>
+ <img id="myImg" src="album.JPG" alt="÷ divide" width="200" height="200">
+              
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<!------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------>
+<img id="myImg2" src="album2.JPG" alt="+" width="200" height="200">
+              
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<!------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------>
+  <img id="myImg3" src="album3.JPG" alt="DON'T" width="200" height="200">
+              
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<!------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------>
+<img id="myImg4" src="album4.JPG" alt="NO.6" width="200" height="200">
+              
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<!------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------>
+        <p> .<p>
+              <p>These are just some of the albums</p>
+
+  </div>
+
+      
+      
+      
+      
+      <div id="MyFavoriteSong"></div>
+     <div class="card">     
+      <h2>MyFavoriteSong</h2>
+      <h5>Oct 10.1 Saturday</h5>
+       
+         <p>  Among ED's songs, my favorite song is </p>
+         <p>    1.Photograph  </p>
+          <p>    2.Perfect  </p>   
+         <p>    3.GalwayGirl  </p> 
+         
+         <div class="container">
+  <img src="Ed sheeran3.jpg"  class="image" width="290" height="375">
+  <div class="overlay">
+    <div class="text"> Messy hair </div>
+  </div>
+</div>
+         
+      </div>
+      
+    </div>
+    </div>
+    </body>
+</html>
       
 
       
