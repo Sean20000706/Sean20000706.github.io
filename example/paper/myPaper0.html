@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<link rel="stylesheet" href="./examples/css/style.css">
+<script type="text/javascript" src="./dist/paper-full.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+	var myPath = new Path();
+	myPath.strokeColor = 'black';
+	myPath.add(new Point(40, 90));
+	myPath.add(new Point(90, 40));
+	myPath.add(new Point(140, 90));
+	myPath.closed = true;
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

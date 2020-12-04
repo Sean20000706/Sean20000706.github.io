@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<link rel="stylesheet" href="./examples/css/style.css">
+<script type="text/javascript" src="./dist/paper-full.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+	tool.minDistance = 1;
+	function onMouseDrag(event) {
+		var radius = event.delta.length / 2;
+		var circle = new Path.Circle(event.middlePoint, radius);
+		circle.fillColor = 'black';
+		console.log(event.count);
+	}
+
+	function onMouseDown(event) {
+		// The amount of times the mouse has been pressed:
+		console.log(event.count);
+	}
+
+	function onMouseUp(event) {
+		// The amount of times the mouse has been released:
+		console.log(event.count);
+	}
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

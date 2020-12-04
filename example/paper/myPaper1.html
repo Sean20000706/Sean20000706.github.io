@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<link rel="stylesheet" href="./examples/css/style.css">
+<script type="text/javascript" src="./dist/paper-full.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+	var path = new Path();
+	path.strokeColor = 'black';
+	path.add(new Point(30, 75)); 
+	path.add(new Point(30, 25)); 
+	path.add(new Point(80, 25));
+	path.add(new Point(80, 75));
+	path.closed = true;
+	path.fullySelected = true;
+
+	// Create a copy of the path and move it 100pt to the right:
+	var copy = path.clone();
+	copy.fullySelected = false;
+	copy.strokeColor = 'red';
+	copy.position.x += 100;
+	copy.smooth();	
+
+	var copy2 = path.clone();
+	copy2.fullySelected = true;
+	copy2.position.x += 200;
+	copy2.smooth();	
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

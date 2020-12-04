@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<link rel="stylesheet" href="./examples/css/style.css">
+<script type="text/javascript" src="./dist/paper-full.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+	function onMouseDrag(event) {
+		var path = new Path();
+		path.strokeColor = 'black';
+		var vector = event.delta;
+		vector.angle += 90;
+		vector.length = 5;
+		path.add(event.middlePoint + vector);
+		path.add(event.middlePoint - vector);
+	}
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
